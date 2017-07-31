@@ -4,7 +4,7 @@ Typlog API Documentation. (In development)
 
 ## Authentication
 
-Find your authentication token at (...), send requests with this token:
+Find your authentication token at **typlog.com/account/token**, send requests with this token:
 
 ```http
 GET /api/my/sites
