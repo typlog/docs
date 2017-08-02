@@ -12,6 +12,7 @@ The json file format:
       "slug": "dash-connected-slug",
       "headline": "A headline of the post (optional)",
       "content": "Markdown format content of the post",
+      "status": "published",
       "tags": [
         {
           "slug": "tag-slug",
