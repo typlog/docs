@@ -1,6 +1,6 @@
 # Import Posts from Other services
 
-Typlog supports import from a json file currently. Upload json file in `settings/advanced`.
+Typlog supports import from a json file currently. Upload json file in **Labs**.
 
 The json file format:
 
