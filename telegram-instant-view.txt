@@ -4,11 +4,18 @@
 
 ### STEP 2: Define the essential elements
 
-body:     //article
-title:    $body//h1[1]
-subtitle: $body//*[has-class("entry-headline")][1]
-published_date: $body//*[@itemprop="datePublished"]
-author: $body//*[@itemprop="author"]
+body: //article
+body: //div[has-class("hentry")]
+title: $body//h1[1]
+
+subtitle: $body//div[has-class("entry-headline")][1]
+subtitle: $body//h2[has-class("entry-headline")][1]
+
+published_date: $body//time[@itemprop="datePublished"]
+
+author: $body//span[@itemprop="author"]
+author: $body//strong[@itemprop="author"]
+author: $body//div[@itemprop="author"]
 
 # Find cover element
 @background_to_image: $body//*[has-class("entry-cover")]
@@ -27,6 +34,7 @@ image_url: //head/meta[@property="og:image"]/@content
 @set_attrs(src, @data-src): $body//img
 @remove: $body//div[has-class("site-nav")]
 @remove: $body//div[has-class("entry-meta")]
+@remove: $body//div[has-class("entry-tags")]
 @remove: $body//div[has-class("vcard")]
 @remove: $body//div[has-class("entry-share")]
 @remove: $body//div[has-class("entry-enjoy")]
