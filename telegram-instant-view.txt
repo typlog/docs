@@ -1,0 +1,34 @@
+### STEP 1: Define which pages get Instant View and which don't
+
+?exists: /html/head/meta[@name="typlog:post"]
+
+### STEP 2: Define the essential elements
+
+body:     //article
+title:    $body//h1[1]
+subtitle: $body//*[has-class("entry-headline")][1]
+published_date: $body//*[@itemprop="datePublished"]
+author: $body//*[@itemprop="author"]
+
+# Find cover element
+@background_to_image: $body//*[has-class("entry-cover")]
+cover: $@
+
+# If we've already got a cover, we'll use it for the link preview image too.
+image_url: $cover/self::img/@src
+image_url: $cover/self::figure//img/@src
+
+# If we didn't find a cover, we'll take a picture from the meta tags. 
+# Otherwise, the link preview will just have text in it, which is also OK.
+image_url: //head/meta[@property="og:image"]/@content
+
+### STEP 3: Refine the body
+
+@set_attrs(src, @data-src): $body//img
+@remove: $body//div[has-class("site-nav")]
+@remove: $body//div[has-class("entry-meta")]
+@remove: $body//div[has-class("vcard")]
+@remove: $body//div[has-class("entry-share")]
+@remove: $body//div[has-class("entry-enjoy")]
+@remove: $body//section[has-class("post-section")]
+@remove: $body//div[has-class("typlog-foot")]
