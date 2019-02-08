@@ -1,24 +1,29 @@
+~version: "2.0"
+
 ### STEP 1: Define which pages get Instant View and which don't
 
-?exists: /html/head/meta[@name="typlog:post"]
+?exists: /html/head/meta[@name="typlog"]
 
 ### STEP 2: Define the essential elements
 
-body: //article
-body: //div[has-class("hentry")]
-title: $body//h1[1]
+body: //div[has-class("entry-content")]
+title: //h1[has-class("entry-title")]
 
-subtitle: $body//div[has-class("entry-headline")][1]
-subtitle: $body//h2[has-class("entry-headline")][1]
+subtitle: //div[has-class("entry-headline")]
+subtitle: //h2[has-class("entry-headline")]
 
-published_date: $body//time[@itemprop="datePublished"]
+channel: /html/head/meta[@name="telegram:channel"]/@content
 
-author: $body//span[@itemprop="author"]
-author: $body//strong[@itemprop="author"]
-author: $body//div[@itemprop="author"]
+published_date: //time[@itemprop="datePublished"]
+
+author: //span[@itemprop="author"]
+author: //strong[@itemprop="author"]
+author: //div[@itemprop="author"]
 
 # Find cover element
-@background_to_image: $body//*[has-class("entry-cover")]
+@background_to_image: //div[has-class("entry-cover")]
+cover: $@
+@background_to_image: //aside[has-class("entry-cover")]
 cover: $@
 
 # If we've already got a cover, we'll use it for the link preview image too.
@@ -29,14 +34,4 @@ image_url: $cover/self::figure//img/@src
 # Otherwise, the link preview will just have text in it, which is also OK.
 image_url: //head/meta[@property="og:image"]/@content
 
-### STEP 3: Refine the body
-
 @set_attrs(src, @data-src): $body//img
-@remove: $body//div[has-class("site-nav")]
-@remove: $body//div[has-class("entry-meta")]
-@remove: $body//div[has-class("entry-tags")]
-@remove: $body//div[has-class("vcard")]
-@remove: $body//div[has-class("entry-share")]
-@remove: $body//div[has-class("entry-enjoy")]
-@remove: $body//section[has-class("post-section")]
-@remove: $body//div[has-class("typlog-foot")]
