@@ -9,8 +9,8 @@ The json file format:
   "posts": [
     {
       "title": "An example title",
+      "subtitle": "Subtitle of the post (optional)",
       "slug": "dash-connected-slug",
-      "headline": "A headline of the post (optional)",
       "content": "Markdown format content of the post",
       "status": "published",
       "tags": [
