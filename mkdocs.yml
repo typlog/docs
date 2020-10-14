@@ -1,0 +1,24 @@
+site_name: Typlog Documentation
+theme:
+  name: material
+  palette:
+    primary: black
+    accent: indigo
+  font:
+    code: Open Sans
+  logo: assets/logo-white.svg
+  favicon: assets/favicon.ico
+  language: en
+
+markdown_extensions:
+  - toc:
+      toc_depth: 3
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/typlog
+      name: Typlog on Twitter
+    - icon: fontawesome/regular/envelope
+      link: mailto:hi@typlog.com
+      name: Contact Typlog
