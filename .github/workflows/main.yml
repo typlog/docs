@@ -24,9 +24,8 @@ jobs:
       - name: Build
         run: mkdocs build
       - name: 🚀Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: site
-          CLEAN: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          cname: docs.typlog.com
