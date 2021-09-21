@@ -2,7 +2,7 @@
 title: Content API
 description: 'Content API delivers published content including posts, episodes, and moments in machine-readable formats. Developers can use the content
 API to create a custom website, app, or other things.'
-position: 0
+position: 2
 ---
 
 # Content API
@@ -11,6 +11,7 @@ position: 0
 
 ```
 /feed.json
+/posts/feed.json
 /episodes/feed.json
 ```
 
@@ -22,6 +23,7 @@ Here are some examples:
 
 ```
 https://blog.typlog.com/feed.json
+https://lepture.com/posts/feed.json
 http://fakefestival.org/episodes/feed.json
 ```
 
