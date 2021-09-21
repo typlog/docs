@@ -1,0 +1,1174 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation on how to develop your own theme.">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.8">
+    
+    
+      
+        <title>Theme - Typlog Help</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.92558b1b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7COpen+Sans&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:"Open Sans"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#preparation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Typlog Help" class="md-header__button md-logo" aria-label="Typlog Help" data-md-component="logo">
+      
+  <img src="../assets/logo-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Typlog Help
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Theme
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Typlog Help" class="md-nav__button md-logo" aria-label="Typlog Help" data-md-component="logo">
+      
+  <img src="../assets/logo-white.svg" alt="logo">
+
+    </a>
+    Typlog Help
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../start/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../podcast/" class="md-nav__link">
+        Podcast Hosting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../domain/" class="md-nav__link">
+        Domain
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Theme
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Theme
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocks" class="md-nav__link">
+    Blocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    meta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    script
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#site" class="md-nav__link">
+    site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static_url" class="md-nav__link">
+    static_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaborator" class="md-nav__link">
+    collaborator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Macros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snippets" class="md-nav__link">
+    Snippets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-hooks" class="md-nav__link">
+    JavaScript hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-your-theme" class="md-nav__link">
+    Submit your theme
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-api/" class="md-nav__link">
+        Content API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhook/" class="md-nav__link">
+        Webhook
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    Preparation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates" class="md-nav__link">
+    Templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocks" class="md-nav__link">
+    Blocks
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    meta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    script
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#site" class="md-nav__link">
+    site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page" class="md-nav__link">
+    page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static_url" class="md-nav__link">
+    static_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collaborator" class="md-nav__link">
+    collaborator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros" class="md-nav__link">
+    Macros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snippets" class="md-nav__link">
+    Snippets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-hooks" class="md-nav__link">
+    JavaScript hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-your-theme" class="md-nav__link">
+    Submit your theme
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Theme</h1>
+                
+                <h2 id="preparation">Preparation</h2>
+<p>To develop your own theme, you need to grab an API token at first. You can create one in your
+account system. Click <a href="https://typlog.com/account/tokens/add">https://typlog.com/account/tokens/add</a> to create one.</p>
+<p><img alt="create token" src="https://i.typlog.com/changelog/8367875253_678692.jpg" /></p>
+<p>PLEASE CHECK THE <strong>theme</strong> SCOPE BEFORE SAVING THE TOKEN.</p>
+<p>You will also use <strong>serve-theme</strong> tool to develop your theme, get the executable binary
+file from <a href="https://github.com/typlog/serve-theme/releases">https://github.com/typlog/serve-theme/releases</a>. Download the one matching your
+OS system, rename it ot <strong>serve-theme</strong>.</p>
+<p>This tool can create a localhost site for previewing your current theme.</p>
+<h2 id="templates">Templates</h2>
+<p>Let's create an example theme called <strong>hello</strong>. First, we create a folder <strong>hello</strong>, then we
+add some files into this folder:</p>
+<pre><code class="language-bash">$ cd hello
+$ ls
+README.md  home.j2  item.j2  list.j2  hello.css  theme.json
+</code></pre>
+<p>In this folder, we have 3 templates:</p>
+<ol>
+<li><code>home.j2</code> - this is your homepage</li>
+<li><code>list.j2</code> - template for posts, episodes list/archive page</li>
+<li><code>item.j2</code> - detail page for a post, episode or page.</li>
+</ol>
+<p>Another required file is <code>theme.json</code>, which contains information about your theme.</p>
+<p>Then we can start our dev server with <strong>serve-theme</strong>:</p>
+<pre><code class="language-bash">$ export TOKEN=pt_xxxx   # this token is created in preparation
+$ export SITE=123        # find your site ID in Typlog
+$ ../serve-theme         # assuming this bin file is located in the parent folder
+2021/09/21 20:54:44 Listening . on port 7000
+</code></pre>
+<p>Then open your browser and visit <code>http://localhost:7000</code>.</p>
+<p>Let's add some code into <code>home.j2</code> file:</p>
+<pre><code class="language-jinja">{% block body %}
+&lt;h1&gt;Hello Typlog&lt;/h1&gt;
+{% endblock %}
+</code></pre>
+<p>Then refresh your browser, you will see the changes in <code>http://localhost:7000</code>. But the
+above code is useless, you have to learn the <strong>variables</strong> provided by Typlog to add
+content into your templates.</p>
+<p>These templates are Jinja templates. You can learn the syntax at the offical documentation:
+<a href="https://jinja.palletsprojects.com/en/3.0.x/templates/">https://jinja.palletsprojects.com/en/3.0.x/templates/</a>.</p>
+<h2 id="blocks">Blocks</h2>
+<p>We don't use <code>{% extends %}</code> in Typlog themes, each template inherits its own base layout which
+contains many usefull code in <code>&lt;head&gt;</code>. What we actually need are <strong>blocks</strong>:</p>
+<h3 id="meta">meta</h3>
+<p>Adding more <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code> tag in <strong>meta</strong> block:</p>
+<pre><code class="language-jinja">{% block meta %}
+&lt;meta ....&gt;
+{% endblock %}
+</code></pre>
+<h3 id="style">style</h3>
+<p>Adding css in <strong>style</strong> block:</p>
+<pre><code class="language-jinja">{% block style %}
+&lt;style&gt;...&lt;/style&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ static_url }}hello.css&quot;&gt;
+{% endblock }
+</code></pre>
+<h3 id="body">body</h3>
+<p>This is the main block for your theme. All content should be in this block.</p>
+<pre><code class="language-jinja">{% block body %}
+&lt;header&gt;
+...
+&lt;/header&gt;
+&lt;main&gt;
+...
+&lt;/main&gt;
+&lt;footer&gt;
+...
+&lt;/footer&gt;
+{% endblock %}
+</code></pre>
+<h3 id="script">script</h3>
+<p>This block is located at the bottom of <code>&lt;body&gt;</code> tag, we can add some scripts here if needed:</p>
+<pre><code class="language-jinja">{% block script %}
+&lt;script&gt;console.log('test');&lt;/script&gt;
+{% endblock %}
+</code></pre>
+<h2 id="variables">Variables</h2>
+<p>In the templates, we can use variables to render the real data into HTML. Here are all the
+variables:</p>
+<h3 id="site"><code>site</code></h3>
+<p>This is a global variable, it contains the information about your site. The detail structure:</p>
+<pre><code class="language-yml">site:
+  id: integer
+  name: string
+  slug: string
+  primary_lang: string
+  languages: [string, string]
+  base_url: uri
+  active: boolean
+  summary?: string
+  favicon?: uri
+  touch_icon?:
+    src: uri
+    width: integer
+    height: integer
+  logo?:
+    src: uri
+    width: integer
+    height: integer
+  cover?:
+    src: uri
+    width: integer
+    height: integer
+  license?: string
+  nav_links: [{ url, title, blank }]
+  color: string
+  socials: {}
+  sponsors: {}
+  podcast?:  # if enabled and has podcast information
+    title: string
+    subtitle: string
+    description: string
+    explicit: boolean
+    categories: []
+    type: string
+    image: uri
+    email: string
+    author: string
+    homepage: uri
+    keywords: string
+    copyright: string
+    links?: [ { icon, url, title, blank } ]
+</code></pre>
+<h3 id="query"><code>query</code></h3>
+<p>This is a global variable, it contains methods to query posts, episodes and etc.</p>
+<p><strong><code>.latest_subjects(subject_type=None, count=10, contains=None)</code></strong></p>
+<p>This will list the recent posts or episodes. This method is usually used in
+<code>home.j2</code> template. The <code>subject_type</code> value can be <code>post</code> and <code>audio</code>.</p>
+<p>Here is an example in <code>home.j2</code>:</p>
+<pre><code class="language-jinja">{% block body %}
+&lt;ul&gt;
+    {% for post in query.latest_subjects('post') %}
+    &lt;li&gt;{{ post.title }}&lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+{% endblock %}
+</code></pre>
+<p><code>contains</code> is a list, which can contain: <code>collaborators</code>, <code>tags</code>, and <code>content</code>.</p>
+<p>If there is no need to show authors, tags or full content of a post, we can pass
+nothing to <code>contains</code> which will improve the performance of rendering.</p>
+<p><strong><code>.previous_subjects(subject, count=1, same_type=True, contains=None)</code></strong></p>
+<p>This method can list the previous posts or episodes of the given subject(post or episode).
+This is usually used in <code>item.j2</code> template:</p>
+<pre><code class="language-jinja">{% block body %}
+...
+&lt;div class=&quot;previous&quot;&gt;
+  {% for post in query.previous_subjects(page, count=2) %}
+    &lt;a href=&quot;{{ post.url }}&gt;{{ post.title }}&lt;/a&gt;
+  {% endfor %}
+&lt;/div&gt;
+{% endblock %}
+</code></pre>
+<p><strong><code>.previous_subject(subject, same_type=True, contains=None)</code></strong></p>
+<p>This method will return only the nearest previous subject. It is used in <code>item.j2</code> template.</p>
+<p><strong><code>.next_subjects(subject, count=1, same_type=True, contains=None)</code></strong></p>
+<p>This method is the same as <code>query.previous_subjects</code>, but for <strong>next</strong>.</p>
+<p><strong><code>.next_subject(subject, same_type=True, contains=None)</code></strong></p>
+<p>This method is the same as <code>query.previous_subject</code>, but for <strong>next</strong>.</p>
+<p><strong><code>.tags()</code></strong></p>
+<p>This method will list all the tags in your site:</p>
+<pre><code class="language-jinja">{% block body %}
+  Tags:
+  {% for tag in query.tags() %}
+    &lt;a href=&quot;{{ tag.url }}&quot;&gt;{{ tag.title }}&lt;/a&gt;
+  {% endfor %}
+{% endblock %}
+</code></pre>
+<p><strong><code>.years(subject_type=None)</code></strong></p>
+<p>This method will list all the years of your posts or episodes.</p>
+<p><strong><code>query.collaborators()</code></strong></p>
+<p>This method will list all the authors, including hosts and guests in your site.</p>
+<h3 id="features"><code>features</code></h3>
+<p>This is a global variable, it contains the features this site supports:</p>
+<pre><code class="language-yml">features:
+  post: boolean
+  audio: boolean
+  photo: boolean
+  comment: boolean
+  subscriber: boolean
+  algolia: boolean
+</code></pre>
+<h3 id="page"><code>page</code></h3>
+<p><code>page</code> is a context aware variable. It is different in each view.</p>
+<p>In <code>list.j2</code>, the structure is:</p>
+<pre><code class="language-yml">page:
+  title: string
+  url: path
+  type: string
+  topic: object
+  items: []
+  prev_year?: integer
+  prev_url?: path
+  next_year?: integer
+  next_url?: path
+</code></pre>
+<p>A <code>topic</code> refers to a model about the list page. For instance, in a tag
+page: <code>/tags/web</code>, this <code>topic</code> is the <code>tag</code> object, which means you
+can set:</p>
+<pre><code class="language-jinja">{% set tag = page.topic %}
+</code></pre>
+<p>This <code>topic</code> is usually used together with <code>type</code>. Here is an example of
+how to use it:</p>
+<pre><code class="language-jinja">{% macro render_tag(tag) %}
+...
+{% endmacro }
+
+{% macro render_user(author) %}
+{% endmacro }
+
+...
+
+{% block body %}
+  {% if page.type == 'tag' %}
+    {{ render_tag(page.topic) }}
+  {% elif page.type == 'author' %}
+    {{ render_tag(page.topic) }}
+  {% elif page.type == 'episode_list' %}
+    {{ render_podcast_info(site) }}
+  {% else %}
+    {{ render_site_info(site) }}
+  {% endif %}
+{% endblock }
+</code></pre>
+<p><code>items</code> is a list of <code>posts</code> and <code>episodes</code> of current visiting page.</p>
+<p>In <code>item.j2</code>, <code>page</code> refers to a <code>post</code>, an <code>episode</code>, or a <code>page</code> object.</p>
+<pre><code class="language-yml">page:
+  id: integer
+  type: string  # post, audio, page
+  slug: string
+  lang: string
+  title: string
+  cover?:
+    src: uri
+    width: integer
+    height: integer
+  subtitle?: string
+  content: string
+  url: path
+  tags: array of tags
+  collaborators: array of authors
+  published_at: datetime
+  updated_at: datetime
+  comment: string  # open, closed, disabled
+  visibility: string  # public, password, member
+  render_html: function  # render_html(lazy=True) -&gt; HTML
+
+  # only available with &quot;post&quot; type
+  license: string
+  review?:
+  reply_to?:
+
+  # only available with &quot;audio&quot; type
+  image: uri
+  explicit: boolean
+  season: integer
+  episode: integer
+  episode_type: string
+  duration: string
+  audio:
+    src: uri
+    size: integer
+    duration: integer
+    mimetype: string
+</code></pre>
+<h3 id="static_url"><code>static_url</code></h3>
+<p>This variable will be a jsdelivr link. In development, <code>serve-theme</code> will replace
+this variable to the local css file. It is usually used in:</p>
+<pre><code class="language-jinja">{% block style %}
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;{{ static_url }}hello.css&quot;&gt;
+{% endblock %}
+</code></pre>
+<h3 id="tag"><code>tag</code></h3>
+<p>This is not a variable, but it may be used via:</p>
+<ol>
+<li><code>query.tags()</code></li>
+<li><code>page.topic</code> of <strong>tag</strong> type in <code>list.j2</code></li>
+<li><code>page.tags</code> in <code>item.j2</code></li>
+</ol>
+<p>The structure of a tag:</p>
+<pre><code class="language-yml">tag:
+  id: integer
+  slug: string
+  title: string
+  summary: string
+  cover?:
+    src: uri
+    width: integer
+    height: integer
+  metadata: {}
+  url: path
+</code></pre>
+<h3 id="collaborator"><code>collaborator</code></h3>
+<p>This object may be one of these:</p>
+<ol>
+<li><code>query.collaborators()</code></li>
+<li><code>page.topic</code> of <strong>author</strong> type in <code>list.j2</code></li>
+<li><code>page.collaborators</code> in item.j2</li>
+</ol>
+<p>The structure of a collaborator:</p>
+<pre><code class="language-yml">collaborator:
+  username: string
+  name: string
+  type: string  # host, guest
+  cover?:
+    src: uri
+    width: integer
+    height: integer
+  avatar: uri
+  bio: html
+  metadata: {}
+  url: path
+</code></pre>
+<h2 id="filters">Filters</h2>
+<p>We can use all the built-in filters provided by Jinja. And in Typlog,
+there are two more filters:</p>
+<ol>
+<li>
+<p><code>xmldatetime</code>: used to format <code>.published_at</code></p>
+<p><code>jinja
+&lt;time datetime="{{ page.published_at|xmldatetime }}"&gt;</code></p>
+</li>
+<li>
+<p><code>thumbnail</code>: used to resize image</p>
+<p><code>jinja
+&lt;img src="{{ site.logo.src|thumbnail('ss') }}"&gt;</code></p>
+<p>Available sizes:</p>
+<ul>
+<li>s: small size</li>
+<li>m: middle size</li>
+<li>l: large size</li>
+<li>ss: crop to squared small size</li>
+<li>sm: squared middle size</li>
+<li>sl: squared large size</li>
+</ul>
+</li>
+</ol>
+<h2 id="macros">Macros</h2>
+<p>There are some built-in macros, which can be used to help you
+rendering the templates.</p>
+<pre><code class="language-jinja">{% from &quot;macros.j2&quot; import render_social_icons %}
+
+This macro is used for:
+
+{{ render_social_icons(site) }}
+
+{% from &quot;macros.j2&quot; import render_item, render_navigation %}
+
+The `render_item` is usually used in `home.j2` and `list.j2`.
+
+{% for item in query.latest_subjects() %}
+  {{ render_item(site, item) }}
+{% endfor %}
+
+The `render_navigation` macro is used in `list.j2` to render the year navigation:
+
+{{ render_navigation(site, page) }}
+
+{% from &quot;macros.j2&quot; import render_subject_visibility, render_subject_content %}
+{% from &quot;macros.j2&quot; import render_subject_license, render_review_subject, render_subject_collaborators %}
+
+These macros are used in `item.j2`. The `render_subject_content` is used to render the content part, it will
+handle visibility automatically.
+
+{{ render_subject_content(site, page) }}
+
+Parameters for other macros:
+
+{{ render_subject_visibility(site, page) }}
+{{ render_subject_license(site, page) }}
+
+{% if page.review %}
+  {{ render_review_subject(page.review) }}
+{% endif %}
+
+{{ render_subject_collaborators(site, page) }}
+</code></pre>
+<h2 id="snippets">Snippets</h2>
+<p>Here are the built-in snippets which we can <code>{% include %}</code> them:</p>
+<pre><code class="language-jinja">this is typlog brand foot
+{% include &quot;_snippets/brand_foot.j2&quot; }
+
+this is your site foot
+{% include &quot;_snippets/site_foot.j2&quot; }
+</code></pre>
+<p>Used in <code>item.j2</code>:</p>
+<pre><code class="language-jinja">{% include &quot;_snippets/subject_share.j2&quot; %}
+
+{% include &quot;_snippets/subject_foot.j2&quot; %}
+</code></pre>
+<h2 id="javascript-hooks">JavaScript hooks</h2>
+<p>In the rendered html, Typlog will inject a <code>typlog.js</code> script. This script has many features, we can
+use <code>js-?</code> class to connect the hooks.</p>
+<p><strong>js-search</strong>: popup the algolia search overlay</p>
+<pre><code class="language-jinja">{% if features.algolia %}
+  &lt;input class=&quot;js-search&quot; type=&quot;text&quot; placeholder=&quot;Search...&quot; data-id=&quot;{{ site.algolia_id }}&quot; data-key=&quot;{{ site.algolia_key }}&quot;&gt;
+{% endif %}
+</code></pre>
+<p><strong>js-subscribe</strong>: popup the subscribe dialog</p>
+<pre><code class="language-jinja">&lt;button class=&quot;js-subscribe&quot;&gt;Subscribe&lt;/button&gt;
+</code></pre>
+<p><strong>js-audio</strong>: render the player UI</p>
+<pre><code class="language-jinja">&lt;div class=&quot;entry-audio js-audio&quot;&gt;
+  &lt;audio src=&quot;{{ page.audio.src }}&quot; preload=&quot;none&quot; controls
+          {% if page.image %}data-image=&quot;{{ page.image|thumbnail('ss') }}&quot;{% endif %}&gt;
+  &lt;/audio&gt;
+&lt;/div&gt;
+
+This hook is already included in
+
+{{ render_subject_content(site, page) }}
+</code></pre>
+<p><strong>js-enjoy</strong>: click to send <code>like</code> event</p>
+<pre><code class="language-jinja">&lt;button class=&quot;js-enjoy&quot;&gt;Enjoy&lt;/button&gt;
+
+This hook is already included in snippet:
+
+{% include &quot;_snippets/subject_share.j2&quot; %}
+</code></pre>
+<h2 id="submit-your-theme">Submit your theme</h2>
+<p>When you have finished developing your theme, fill all the information in <code>theme.json</code>.
+The required fields are:</p>
+<pre><code>name
+author
+repo
+version
+images
+</code></pre>
+<p>And then register your theme with a pull request to <a href="https://github.com/typlog/themes">https://github.com/typlog/themes</a>.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../domain/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Domain" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Domain
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../content-api/" class="md-footer__link md-footer__link--next" aria-label="Next: Content API" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Content API
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/typlog" target="_blank" rel="noopener" title="Typlog on Twitter" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="mailto:hi@typlog.com" target="_blank" rel="noopener" title="Contact Typlog" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+      
+    
+  </body>
+</html>
