@@ -10,6 +10,15 @@ theme:
   favicon: assets/favicon.ico
   language: en
 
+nav:
+  - index.md
+  - start.md
+  - podcast.md
+  - domain.md
+  - theme.md
+  - content-api.md
+  - webhook.md
+
 markdown_extensions:
   - toc:
       toc_depth: 3

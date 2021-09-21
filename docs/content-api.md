@@ -1,8 +1,10 @@
 ---
 title: Content API
-description: 'Content API delivers published content including posts, episodes, and moments in machine-readable formats. Developers can use the content
-API to create a custom website, app, or other things.'
-position: 2
+description: |
+  Content API delivers published content including posts, episodes, and moments in
+  machine-readable formats. Developers can use the content API to create a custom
+  website, app, or other things.
+position: 7
 ---
 
 # Content API
