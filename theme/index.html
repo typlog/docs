@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.8">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.92558b1b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -76,7 +76,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="Typlog Help" class="md-header__button md-logo" aria-label="Typlog Help" data-md-component="logo">
       
@@ -141,11 +143,14 @@
     
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -1040,10 +1045,9 @@ this is your site foot
 <h2 id="javascript-hooks">JavaScript hooks</h2>
 <p>In the rendered html, Typlog will inject a <code>typlog.js</code> script. This script has many features, we can
 use <code>js-?</code> class to connect the hooks.</p>
-<p><strong>js-search</strong>: popup the algolia search overlay</p>
-<pre><code class="language-jinja">{% if features.algolia %}
-  &lt;input class=&quot;js-search&quot; type=&quot;text&quot; placeholder=&quot;Search...&quot; data-id=&quot;{{ site.algolia_id }}&quot; data-key=&quot;{{ site.algolia_key }}&quot;&gt;
-{% endif %}
+<p><strong>js-search</strong>: popup the search overlay</p>
+<pre><code class="language-jinja">&lt;input class=&quot;js-search&quot; type=&quot;text&quot; placeholder=&quot;Search...&quot;
+{% if features.algolia %}data-id=&quot;{{ site.algolia_id }}&quot; data-key=&quot;{{ site.algolia_key }}&quot;{% endif %}&gt;
 </code></pre>
 <p><strong>js-subscribe</strong>: popup the subscribe dialog</p>
 <pre><code class="language-jinja">&lt;button class=&quot;js-subscribe&quot;&gt;Subscribe&lt;/button&gt;
@@ -1133,10 +1137,12 @@ images
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
         
       </div>
       
@@ -1164,10 +1170,10 @@ images
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.94ec81fe.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.48dfec6c.min.js"></script>
+      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
       
     
   </body>
