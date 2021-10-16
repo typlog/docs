@@ -515,12 +515,11 @@ Used in `item.j2`:
 In the rendered html, Typlog will inject a `typlog.js` script. This script has many features, we can
 use `js-?` class to connect the hooks.
 
-**js-search**: popup the algolia search overlay
+**js-search**: popup the search overlay
 
 ```jinja
-{% if features.algolia %}
-  <input class="js-search" type="text" placeholder="Search..." data-id="{{ site.algolia_id }}" data-key="{{ site.algolia_key }}">
-{% endif %}
+<input class="js-search" type="text" placeholder="Search..."
+{% if features.algolia %}data-id="{{ site.algolia_id }}" data-key="{{ site.algolia_key }}"{% endif %}>
 ```
 
 **js-subscribe**: popup the subscribe dialog
