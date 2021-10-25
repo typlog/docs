@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.5143246d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -378,8 +378,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#collaborator" class="md-nav__link">
-    collaborator
+  <a href="#author" class="md-nav__link">
+    author
   </a>
   
 </li>
@@ -591,8 +591,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#collaborator" class="md-nav__link">
-    collaborator
+  <a href="#author" class="md-nav__link">
+    author
   </a>
   
 </li>
@@ -790,7 +790,7 @@ variables:</p>
 &lt;/ul&gt;
 {% endblock %}
 </code></pre>
-<p><code>contains</code> is a list, which can contain: <code>collaborators</code>, <code>tags</code>, and <code>content</code>.</p>
+<p><code>contains</code> is a list, which can contain: <code>authors</code>, <code>tags</code>, and <code>content</code>.</p>
 <p>If there is no need to show authors, tags or full content of a post, we can pass
 nothing to <code>contains</code> which will improve the performance of rendering.</p>
 <p><strong><code>.previous_subjects(subject, count=1, same_type=True, contains=None)</code></strong></p>
@@ -822,7 +822,7 @@ This is usually used in <code>item.j2</code> template:</p>
 </code></pre>
 <p><strong><code>.years(subject_type=None)</code></strong></p>
 <p>This method will list all the years of your posts or episodes.</p>
-<p><strong><code>query.collaborators()</code></strong></p>
+<p><strong><code>query.authors()</code></strong></p>
 <p>This method will list all the authors, including hosts and guests in your site.</p>
 <h3 id="features"><code>features</code></h3>
 <p>This is a global variable, it contains the features this site supports:</p>
@@ -892,7 +892,7 @@ how to use it:</p>
   content: string
   url: path
   tags: array of tags
-  collaborators: array of authors
+  authors: array of authors
   published_at: datetime
   updated_at: datetime
   comment: string  # open, closed, disabled
@@ -916,6 +916,12 @@ how to use it:</p>
     size: integer
     duration: integer
     mimetype: string
+</code></pre>
+<p>In episode post, <code>page</code> contains two more attributes:</p>
+<pre><code class="language-yml">page:
+  # ....
+  hosts: array of authors
+  guests: array of authors
 </code></pre>
 <h3 id="static_url"><code>static_url</code></h3>
 <p>This variable will be a jsdelivr link. In development, <code>serve-theme</code> will replace
@@ -944,18 +950,17 @@ this variable to the local css file. It is usually used in:</p>
   metadata: {}
   url: path
 </code></pre>
-<h3 id="collaborator"><code>collaborator</code></h3>
+<h3 id="author"><code>author</code></h3>
 <p>This object may be one of these:</p>
 <ol>
-<li><code>query.collaborators()</code></li>
+<li><code>query.authors()</code></li>
 <li><code>page.topic</code> of <strong>author</strong> type in <code>list.j2</code></li>
-<li><code>page.collaborators</code> in item.j2</li>
+<li><code>page.authors</code> in item.j2</li>
 </ol>
-<p>The structure of a collaborator:</p>
-<pre><code class="language-yml">collaborator:
+<p>The structure of a author:</p>
+<pre><code class="language-yml">author:
   username: string
   name: string
-  type: string  # host, guest
   cover?:
     src: uri
     width: integer
@@ -964,6 +969,9 @@ this variable to the local css file. It is usually used in:</p>
   bio: html
   metadata: {}
   url: path
+
+  # only in page.authors
+  role: string  # primary, secondary
 </code></pre>
 <h2 id="filters">Filters</h2>
 <p>We can use all the built-in filters provided by Jinja. And in Typlog,
@@ -1011,7 +1019,7 @@ The `render_navigation` macro is used in `list.j2` to render the year navigation
 {{ render_navigation(site, page) }}
 
 {% from &quot;macros.j2&quot; import render_subject_visibility, render_subject_content %}
-{% from &quot;macros.j2&quot; import render_subject_license, render_review_subject, render_subject_collaborators %}
+{% from &quot;macros.j2&quot; import render_subject_license, render_review_subject, render_subject_authors %}
 
 These macros are used in `item.j2`. The `render_subject_content` is used to render the content part, it will
 handle visibility automatically.
@@ -1027,7 +1035,7 @@ Parameters for other macros:
   {{ render_review_subject(page.review) }}
 {% endif %}
 
-{{ render_subject_collaborators(site, page) }}
+{{ render_subject_authors(site, page) }}
 </code></pre>
 <h2 id="snippets">Snippets</h2>
 <p>Here are the built-in snippets which we can <code>{% include %}</code> them:</p>
@@ -1173,7 +1181,7 @@ images
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      <script src="../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
