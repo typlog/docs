@@ -193,7 +193,7 @@ Here is an example in `home.j2`:
 {% endblock %}
 ```
 
-`contains` is a list, which can contain: `collaborators`, `tags`, and `content`.
+`contains` is a list, which can contain: `authors`, `tags`, and `content`.
 
 If there is no need to show authors, tags or full content of a post, we can pass
 nothing to `contains` which will improve the performance of rendering.
@@ -243,7 +243,7 @@ This method will list all the tags in your site:
 
 This method will list all the years of your posts or episodes.
 
-**`query.collaborators()`**
+**`query.authors()`**
 
 This method will list all the authors, including hosts and guests in your site.
 
@@ -333,7 +333,7 @@ page:
   content: string
   url: path
   tags: array of tags
-  collaborators: array of authors
+  authors: array of authors
   published_at: datetime
   updated_at: datetime
   comment: string  # open, closed, disabled
@@ -357,6 +357,15 @@ page:
     size: integer
     duration: integer
     mimetype: string
+```
+
+In episode post, `page` contains two more attributes:
+
+```yml
+page:
+  # ....
+  hosts: array of authors
+  guests: array of authors
 ```
 
 ### `static_url`
@@ -394,21 +403,20 @@ tag:
   url: path
 ```
 
-### `collaborator`
+### `author`
 
 This object may be one of these:
 
-1. `query.collaborators()`
+1. `query.authors()`
 2. `page.topic` of **author** type in `list.j2`
-3. `page.collaborators` in item.j2
+3. `page.authors` in item.j2
 
-The structure of a collaborator:
+The structure of a author:
 
 ```yml
-collaborator:
+author:
   username: string
   name: string
-  type: string  # host, guest
   cover?:
     src: uri
     width: integer
@@ -417,6 +425,9 @@ collaborator:
   bio: html
   metadata: {}
   url: path
+
+  # only in page.authors
+  role: string  # primary, secondary
 ```
 
 ## Filters
@@ -471,7 +482,7 @@ The `render_navigation` macro is used in `list.j2` to render the year navigation
 {{ render_navigation(site, page) }}
 
 {% from "macros.j2" import render_subject_visibility, render_subject_content %}
-{% from "macros.j2" import render_subject_license, render_review_subject, render_subject_collaborators %}
+{% from "macros.j2" import render_subject_license, render_review_subject, render_subject_authors %}
 
 These macros are used in `item.j2`. The `render_subject_content` is used to render the content part, it will
 handle visibility automatically.
@@ -487,7 +498,7 @@ Parameters for other macros:
   {{ render_review_subject(page.review) }}
 {% endif %}
 
-{{ render_subject_collaborators(site, page) }}
+{{ render_subject_authors(site, page) }}
 ```
 
 ## Snippets
